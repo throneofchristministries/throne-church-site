@@ -1,7 +1,7 @@
 import { metadata, viewport } from 'next-sanity/studio';
 import { Studio } from './Studio';
 
-// These can only be exported from a Server Component
+// Server-side exports are now allowed because this file is a Server Component
 export { metadata, viewport };
 
 export default function StudioPage() {
