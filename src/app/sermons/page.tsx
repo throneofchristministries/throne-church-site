@@ -137,6 +137,28 @@ export default function SermonsPage() {
           </div>
         </div>
       </nav>
+      {/* MOBILE SEARCH */}
+
+<div className="px-6 mt-6 md:hidden">
+
+  <div className="relative">
+
+    <Search
+      className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400"
+      size={18}
+    />
+
+    <input
+      type="text"
+      placeholder="Search sermons..."
+      className="w-full pl-10 pr-4 py-3 rounded-full border border-slate-200 dark:border-gray-700 bg-white dark:bg-gray-800"
+      value={searchTerm}
+      onChange={(e) => setSearchTerm(e.target.value)}
+    />
+
+  </div>
+
+</div>
 
       {/* FEATURED SERMON */}
 
@@ -188,6 +210,21 @@ export default function SermonsPage() {
 
       <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="flex items-center justify-between mb-12 border-b border-slate-200 dark:border-gray-800 pb-8">
+          <div className="flex gap-3 flex-wrap mt-6">
+
+<button className="px-4 py-2 rounded-full bg-blue-600 text-white text-sm">
+All
+</button>
+
+<button className="px-4 py-2 rounded-full bg-slate-200 dark:bg-gray-700 text-sm">
+Pastor
+</button>
+
+<button className="px-4 py-2 rounded-full bg-slate-200 dark:bg-gray-700 text-sm">
+Guest Speaker
+</button>
+
+</div>
           <div>
             <h2 className="text-3xl font-extrabold flex items-center gap-3">
               <Filter className="text-blue-600" />
@@ -227,6 +264,11 @@ export default function SermonsPage() {
                     </button>
                   </div>
                 </div>
+                {sermon.series && (
+  <span className="text-xs font-bold bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+    {sermon.series}
+  </span>
+)}
 
                 <div className="p-8">
                   <h3 className="font-black text-xl mb-4 group-hover:text-blue-600 transition-colors line-clamp-2">
@@ -247,9 +289,34 @@ export default function SermonsPage() {
 
                     {new Date(sermon.date).toLocaleDateString()}
                   </div>
+                  {sermon.audioUrl && (
+  <div className="mt-6">
+
+    <p className="text-sm font-semibold mb-2 text-slate-500">
+      Listen to Audio
+    </p>
+
+    <audio
+      controls
+      className="w-full rounded-lg"
+      src={sermon.audioUrl}
+    />
+
+  </div>
+)}
+{sermon.audioUrl && (
+  <a
+    href={sermon.audioUrl}
+    download
+    className="mt-3 inline-block text-sm font-bold text-blue-600 hover:underline"
+  >
+    Download Audio
+  </a>
+)}
                 </div>
               </motion.div>
             ))}
+          
           </AnimatePresence>
         </div>
 
@@ -263,6 +330,59 @@ export default function SermonsPage() {
           </div>
         )}
       </section>
+      {/* PODCAST SECTION */}
+
+<section className="max-w-5xl mx-auto px-6 mt-20 text-center">
+
+<h2 className="text-3xl font-bold mb-6">
+Listen on the Go
+</h2>
+
+<p className="text-slate-500 mb-6">
+Subscribe to our sermon podcast and stay connected wherever you are.
+</p>
+
+<div className="flex justify-center gap-4 flex-wrap">
+
+<button className="bg-green-600 text-white px-6 py-3 rounded-xl font-bold">
+Spotify
+</button>
+
+<button className="bg-purple-600 text-white px-6 py-3 rounded-xl font-bold">
+Apple Podcasts
+</button>
+
+<button className="bg-red-600 text-white px-6 py-3 rounded-xl font-bold">
+YouTube
+</button>
+
+</div>
+
+</section>
+<section className="max-w-7xl mx-auto px-6 mt-20 grid md:grid-cols-3 gap-8 text-center">
+
+<div>
+<h3 className="text-4xl font-black text-blue-600">
+{sermons.length}
+</h3>
+<p className="text-slate-500">Total Sermons</p>
+</div>
+
+<div>
+<h3 className="text-4xl font-black text-blue-600">
+12+
+</h3>
+<p className="text-slate-500">Sermon Series</p>
+</div>
+
+<div>
+<h3 className="text-4xl font-black text-blue-600">
+5K+
+</h3>
+<p className="text-slate-500">People Reached</p>
+</div>
+
+</section>
 
       {/* FOOTER */}
 

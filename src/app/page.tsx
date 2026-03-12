@@ -221,7 +221,7 @@ export default function Home() {
           initial={{y:-40, opacity:0}}
           animate={{y:0, opacity:1}}
           transition={{duration:1}}
-          className="text-5xl md:text-6xl font-extrabold mb-6"
+          className="text-6xl md:text-7xl font-extrabold mb-6"
         >
           Welcome to the{" "}
           <span className="text-blue-700 dark:text-blue-400">
@@ -235,8 +235,7 @@ export default function Home() {
 
         <a
           href="#latest-sermon"
-          className="bg-blue-700 text-white px-10 py-4 rounded-xl font-bold inline-flex gap-2"
-        >
+           className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300"        >
           <PlayCircle/> Watch Latest Sermon
         </a>
 
@@ -245,6 +244,57 @@ export default function Home() {
         </p>
 
       </header>
+      {/* QUICK ACTIONS */}
+
+<section className="py-16 bg-gray-100 dark:bg-gray-800">
+
+<div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center px-6">
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
+<h3 className="text-xl font-bold mb-3">I'm New</h3>
+<p className="mb-4">Learn more about our church.</p>
+<Link href="/about" className="text-blue-600 font-bold">Start Here →</Link>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
+<h3 className="text-xl font-bold mb-3">Watch Live</h3>
+<p className="mb-4">Join our live Sunday service.</p>
+<Link href="/live" className="text-blue-600 font-bold">Watch Now →</Link>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow-lg">
+<h3 className="text-xl font-bold mb-3">Give Online</h3>
+<p className="mb-4">Support the ministry.</p>
+<Link href="/giving" className="text-blue-600 font-bold">Give Today →</Link>
+</div>
+
+</div>
+</section>
+      {/* UPCOMING EVENTS */}
+<section className="py-20 bg-gray-50 dark:bg-gray-800">
+  <div className="max-w-7xl mx-auto px-6">
+    <h2 className="text-4xl font-bold text-center mb-12 text-blue-700 dark:text-blue-400">
+      Upcoming Events
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-8">
+      {events.map((event, i) => (
+        <div
+          key={i}
+          className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow-lg"
+        >
+          <h3 className="text-xl font-bold mb-2">{event.title}</h3>
+          <p className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+            <Calendar size={16}/> {formatDate(event.date)}
+          </p>
+          <p className="flex items-center gap-2 text-gray-600 dark:text-gray-300">
+            <MapPin size={16}/> {event.location}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* MISSION */}
 
@@ -283,44 +333,172 @@ export default function Home() {
           />
 
         </div>
+{/* SERVICE TIMES */}
+<section className="py-20">
+  <div className="max-w-5xl mx-auto text-center px-6">
+    <h2 className="text-4xl font-bold mb-10 text-blue-700 dark:text-blue-400">
+      Service Times
+    </h2>
 
+    <div className="grid md:grid-cols-3 gap-8">
+
+      <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
+        <h3 className="font-bold text-xl mb-2">Sunday Worship</h3>
+        <p>9:00 AM – 12:00 PM</p>
+      </div>
+
+      <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
+        <h3 className="font-bold text-xl mb-2">Midweek Service</h3>
+        <p>Wednesday 6:00 PM</p>
+      </div>
+
+      <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
+        <h3 className="font-bold text-xl mb-2">Prayer Meeting</h3>
+        <p>Friday 6:00 PM</p>
+      </div>
+
+    </div>
+  </div>
+</section>
       </section>
 
       {/* LATEST SERMON */}
 
-      {latestSermon && latestSermon.videoUrl && (
+      {/* SERMONS */}
 
-        <section id="latest-sermon" className="py-20 max-w-7xl mx-auto px-6">
+<section className="py-20">
 
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
+<h2 className="text-4xl font-bold text-center mb-16">
+Latest Sermons
+</h2>
 
-            <iframe
-              src={getEmbedUrl(latestSermon.videoUrl)}
-              className="w-full aspect-video rounded-xl shadow-lg"
-              allowFullScreen
-            />
+<div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 px-6">
 
-            <div>
+{sermons.map((sermon, i) => (
 
-              <h2 className="text-3xl font-bold mb-4">
-                {latestSermon.title}
-              </h2>
+<div key={i} className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow">
 
-              <p className="flex gap-2 items-center mb-2">
-                <User size={16}/> {latestSermon.preacher}
-              </p>
+<h3 className="font-bold text-lg mb-2">{sermon.title}</h3>
 
-              <p className="flex gap-2 items-center text-gray-500">
-                <Calendar size={16}/> {formatDate(latestSermon.date)}
-              </p>
+<p className="text-sm text-gray-500 mb-3">
+{formatDate(sermon.date)}
+</p>
 
-            </div>
+<p className="text-sm mb-4">{sermon.preacher}</p>
 
-          </div>
+<button className="bg-blue-600 text-white px-4 py-2 rounded">
+Watch
+</button>
 
-        </section>
+</div>
 
-      )}
+))}
+
+</div>
+</section>
+{/* GALLERY */}
+
+<section className="py-20 bg-gray-50 dark:bg-gray-800">
+
+<h2 className="text-4xl font-bold text-center mb-16">
+Church Life
+</h2>
+
+<div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
+
+<Image src="/gallery/1.jpg" width={400} height={300} alt="" className="rounded-xl"/>
+
+<Image src="/gallery/2.jpg" width={400} height={300} alt="" className="rounded-xl"/>
+
+<Image src="/gallery/3.jpg" width={400} height={300} alt="" className="rounded-xl"/>
+
+</div>
+
+</section>
+      {/* TESTIMONIALS */}
+<section className="py-20 bg-gray-50 dark:bg-gray-800">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+
+    <h2 className="text-4xl font-bold mb-16 text-blue-700 dark:text-blue-400">
+      Testimonies
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-10">
+
+      {testimonials.map((testimony, i) => (
+        <div
+          key={i}
+          className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow"
+        >
+          <p className="italic mb-4">"{testimony.message}"</p>
+          <h4 className="font-bold text-blue-700 dark:text-blue-400">
+            {testimony.name}
+          </h4>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+{/* TESTIMONIALS */}
+<section className="py-20 bg-gray-50 dark:bg-gray-800">
+  <div className="max-w-6xl mx-auto px-6 text-center">
+
+    <h2 className="text-4xl font-bold mb-16 text-blue-700 dark:text-blue-400">
+      Testimonies
+    </h2>
+
+    <div className="grid md:grid-cols-3 gap-10">
+
+      {testimonials.map((testimony, i) => (
+        <div
+          key={i}
+          className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow"
+        >
+          <p className="italic mb-4">"{testimony.message}"</p>
+          <h4 className="font-bold text-blue-700 dark:text-blue-400">
+            {testimony.name}
+          </h4>
+        </div>
+      ))}
+
+    </div>
+
+  </div>
+</section>
+{/* PRAYER REQUEST */}
+
+<section className="py-20 text-center">
+
+<h2 className="text-4xl font-bold mb-6">
+Need Prayer?
+</h2>
+
+<p className="mb-10">
+Submit your prayer request and our team will pray for you.
+</p>
+
+<div className="max-w-xl mx-auto flex gap-4 flex-wrap justify-center">
+
+<input
+type="text"
+placeholder="Your Name"
+className="border px-4 py-3 rounded-lg w-full"
+/>
+
+<textarea
+placeholder="Your Prayer Request"
+className="border px-4 py-3 rounded-lg w-full"
+/>
+
+<button className="bg-blue-600 text-white px-8 py-3 rounded-lg">
+Send Prayer Request
+</button>
+
+</div>
+
+</section>
 
       {/* GIVING */}
 
@@ -363,6 +541,47 @@ export default function Home() {
         </div>
 
       </section>
+      {/* NEWSLETTER */}
+<section className="py-20 bg-blue-900 text-white text-center">
+  <h2 className="text-4xl font-bold mb-6">
+    Stay Connected
+  </h2>
+
+  <p className="mb-8">
+    Subscribe to receive updates, devotionals, and church news.
+  </p>
+
+  <div className="flex justify-center gap-4 flex-wrap">
+    <input
+      type="email"
+      placeholder="Enter your email"
+      className="px-6 py-3 rounded-lg text-black"
+    />
+
+    <button className="bg-blue-500 px-6 py-3 rounded-lg font-bold">
+      Subscribe
+    </button>
+  </div>
+</section>
+{/* MAP */}
+
+<section className="py-20">
+
+<h2 className="text-4xl font-bold text-center mb-10">
+Visit Us
+</h2>
+
+<div className="max-w-6xl mx-auto px-6">
+
+<iframe
+src="https://www.google.com/maps?q=Accra,Ghana&output=embed"
+className="w-full h-96 rounded-xl"
+loading="lazy"
+/>
+
+</div>
+
+</section>
 
       {/* FOOTER */}
 

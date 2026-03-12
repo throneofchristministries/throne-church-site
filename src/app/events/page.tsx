@@ -111,6 +111,68 @@ export default function EventsPage() {
           </div>
         </motion.div>
       </header>
+      {/* EVENT CATEGORIES */}
+
+<div className="flex justify-center gap-4 mt-8 flex-wrap">
+
+<button className="px-4 py-2 rounded-full bg-blue-600 text-white text-sm font-bold">
+All
+</button>
+
+<button className="px-4 py-2 rounded-full bg-slate-200 dark:bg-gray-700 text-sm">
+Services
+</button>
+
+<button className="px-4 py-2 rounded-full bg-slate-200 dark:bg-gray-700 text-sm">
+Conferences
+</button>
+
+<button className="px-4 py-2 rounded-full bg-slate-200 dark:bg-gray-700 text-sm">
+Youth
+</button>
+
+</div>
+      {/* FEATURED EVENT */}
+
+<section className="max-w-7xl mx-auto px-6 mb-20">
+
+{events[0] && (
+
+<div className="bg-blue-600 text-white rounded-[3rem] p-10 shadow-xl">
+
+<h2 className="text-3xl font-black mb-4">
+Next Big Event
+</h2>
+
+<h3 className="text-4xl font-bold mb-4">
+{events[0].title}
+</h3>
+
+<p className="mb-6 opacity-90">
+{events[0].description || "Join us for this powerful gathering."}
+</p>
+
+<div className="flex flex-wrap gap-6 text-sm font-medium">
+
+<span className="flex items-center gap-2">
+<Calendar size={16}/> {formatDate(events[0].date)}
+</span>
+
+<span className="flex items-center gap-2">
+<MapPin size={16}/> {events[0].location}
+</span>
+
+<span className="flex items-center gap-2">
+<Clock size={16}/> {events[0].time || "TBA"}
+</span>
+
+</div>
+
+</div>
+
+)}
+
+</section>
 
       {/* EVENTS GRID */}
       <section className="max-w-7xl mx-auto px-6">
@@ -161,12 +223,25 @@ export default function EventsPage() {
                   {event.description || "Join us for this special gathering as we grow together in Christ."}
                 </p>
 
-                <div className="flex items-center justify-between border-t border-slate-100 dark:border-gray-700 pt-6">
-                  <button className="text-blue-600 dark:text-blue-400 font-bold hover:underline">Add to Calendar</button>
-                  <button className="p-2 hover:bg-slate-100 dark:hover:bg-gray-700 rounded-full transition">
-                    <Share2 size={18} className="text-slate-400" />
-                  </button>
-                </div>
+               <div className="flex items-center justify-between border-t border-slate-100 dark:border-gray-700 pt-6">
+
+<button className="text-blue-600 dark:text-blue-400 font-bold hover:underline">
+Register
+</button>
+
+<div className="flex gap-3">
+
+<button className="p-2 hover:bg-slate-100 dark:hover:bg-gray-700 rounded-full transition">
+<Share2 size={18}/>
+</button>
+
+<button className="p-2 hover:bg-slate-100 dark:hover:bg-gray-700 rounded-full transition">
+<Bell size={18}/>
+</button>
+
+</div>
+
+</div>
               </motion.div>
             ))}
           </AnimatePresence>
@@ -182,6 +257,63 @@ export default function EventsPage() {
           </div>
         )}
       </section>
+      {/* PAST EVENTS */}
+
+<section className="max-w-7xl mx-auto px-6 mt-24">
+
+<h2 className="text-3xl font-bold mb-10 text-center">
+Past Events
+</h2>
+
+<div className="text-center text-slate-500">
+<p>Previous events will appear here.</p>
+</div>
+
+</section>
+      {/* CALENDAR VIEW */}
+
+<section className="max-w-7xl mx-auto px-6 mt-24 text-center">
+
+<h2 className="text-3xl font-black mb-10">
+Event Calendar
+</h2>
+
+<div className="bg-white dark:bg-gray-800 p-10 rounded-[2rem] shadow">
+
+<p className="text-slate-500">
+Full monthly calendar coming soon.
+</p>
+
+</div>
+
+</section>
+{/* EVENT NEWSLETTER */}
+
+<section className="max-w-4xl mx-auto px-6 mt-24 text-center">
+
+<h2 className="text-3xl font-bold mb-6">
+Never Miss an Event
+</h2>
+
+<p className="text-slate-500 dark:text-slate-400 mb-6">
+Subscribe to receive event updates and ministry announcements.
+</p>
+
+<div className="flex gap-4 justify-center flex-wrap">
+
+<input
+type="email"
+placeholder="Enter your email"
+className="px-6 py-3 rounded-xl border"
+/>
+
+<button className="bg-blue-600 text-white px-6 py-3 rounded-xl font-bold">
+Subscribe
+</button>
+
+</div>
+
+</section>
 
       {/* FOOTER */}
       <footer className="mt-20 py-12 text-center text-slate-400 border-t border-slate-200 dark:border-gray-800 mx-6">

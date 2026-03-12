@@ -125,6 +125,42 @@ export default function AboutPage() {
         </motion.div>
 
       </section>
+      {/* CORE VALUES */}
+
+<section className="py-24 bg-gray-50 dark:bg-gray-800">
+
+<div className="max-w-7xl mx-auto px-6">
+
+<h2 className="text-4xl font-bold text-center mb-16 text-blue-700 dark:text-blue-400">
+Our Core Values
+</h2>
+
+<div className="grid md:grid-cols-4 gap-10 text-center">
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow hover:scale-105 transition">
+<h3 className="font-bold text-xl mb-3">Faith</h3>
+<p>Living and trusting in God's word daily.</p>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow hover:scale-105 transition">
+<h3 className="font-bold text-xl mb-3">Love</h3>
+<p>Serving others with compassion.</p>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow hover:scale-105 transition">
+<h3 className="font-bold text-xl mb-3">Community</h3>
+<p>Growing together in Christ.</p>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow hover:scale-105 transition">
+<h3 className="font-bold text-xl mb-3">Service</h3>
+<p>Impacting lives through ministry.</p>
+</div>
+
+</div>
+
+</div>
+</section>
 
 
       {/* HISTORY TIMELINE */}
@@ -177,6 +213,48 @@ export default function AboutPage() {
         </div>
 
       </section>
+      {/* CHURCH GALLERY */}
+
+<section className="py-24">
+
+<div className="max-w-7xl mx-auto px-6">
+
+<h2 className="text-4xl font-bold text-center mb-16 text-blue-700 dark:text-blue-400">
+Church Life
+</h2>
+
+<div className="grid md:grid-cols-3 gap-6">
+
+<Image src="/gallery/1.jpg" width={400} height={300} alt="Church" className="rounded-xl shadow"/>
+
+<Image src="/gallery/2.jpg" width={400} height={300} alt="Worship" className="rounded-xl shadow"/>
+
+<Image src="/gallery/3.jpg" width={400} height={300} alt="Service" className="rounded-xl shadow"/>
+
+</div>
+
+</div>
+
+</section>
+{/* PASTOR MESSAGE */}
+
+<section className="py-24 bg-gray-50 dark:bg-gray-800">
+
+<div className="max-w-5xl mx-auto text-center px-6">
+
+<h2 className="text-4xl font-bold mb-10 text-blue-700 dark:text-blue-400">
+Message from the Pastor
+</h2>
+
+<p className="text-lg leading-relaxed">
+Welcome to Throne of Christ Ministries. Our prayer is that you
+experience God's love and grow spiritually as part of our
+community. We believe God has a purpose for every life.
+</p>
+
+</div>
+
+</section>
 
 
       {/* TEAM */}
@@ -220,6 +298,71 @@ export default function AboutPage() {
         </div>
 
       </section>
+      {/* MINISTRIES */}
+
+<section className="py-24">
+
+<div className="max-w-7xl mx-auto px-6">
+
+<h2 className="text-4xl font-bold text-center mb-16 text-blue-700 dark:text-blue-400">
+Our Ministries
+</h2>
+
+<div className="grid md:grid-cols-4 gap-8 text-center">
+
+<div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow">
+<h3 className="font-bold">Youth Ministry</h3>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow">
+<h3 className="font-bold">Children Ministry</h3>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow">
+<h3 className="font-bold">Music Ministry</h3>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-6 rounded-xl shadow">
+<h3 className="font-bold">Outreach Ministry</h3>
+</div>
+
+</div>
+
+</div>
+
+</section>
+{/* SERVICE TIMES */}
+
+<section className="py-24 bg-gray-50 dark:bg-gray-800">
+
+<div className="max-w-6xl mx-auto text-center px-6">
+
+<h2 className="text-4xl font-bold mb-12 text-blue-700 dark:text-blue-400">
+Service Times
+</h2>
+
+<div className="grid md:grid-cols-3 gap-8">
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow">
+<h3 className="font-bold text-lg">Sunday Worship</h3>
+<p>9:00 AM - 12:00 PM</p>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow">
+<h3 className="font-bold text-lg">Midweek Service</h3>
+<p>Wednesday 6:00 PM</p>
+</div>
+
+<div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow">
+<h3 className="font-bold text-lg">Prayer Meeting</h3>
+<p>Friday 6:00 PM</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
 
 
       {/* CTA */}
@@ -241,6 +384,25 @@ export default function AboutPage() {
         </button>
 
       </section>
+      {/* LOCATION MAP */}
+
+<section className="py-24">
+
+<h2 className="text-4xl font-bold text-center mb-10 text-blue-700 dark:text-blue-400">
+Visit Us
+</h2>
+
+<div className="max-w-6xl mx-auto px-6">
+
+<iframe
+src="https://www.google.com/maps?q=Accra,Ghana&output=embed"
+className="w-full h-96 rounded-xl"
+loading="lazy"
+/>
+
+</div>
+
+</section>
 
 
       {/* FOOTER */}

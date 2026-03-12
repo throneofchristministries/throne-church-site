@@ -112,6 +112,19 @@ export default function ContactPage() {
                   Message Sent Successfully! 🙏
                 </motion.div>
               )}
+              {/* PRAYER REQUEST BUTTON */}
+
+<div className="mt-8 text-center">
+
+<p className="text-slate-500 dark:text-slate-400 mb-4">
+Need prayer? Our team is ready to pray for you.
+</p>
+
+<button className="bg-purple-600 hover:bg-purple-700 text-white px-8 py-3 rounded-full font-bold transition">
+Submit Prayer Request
+</button>
+
+</div>
             </AnimatePresence>
 
             <div>
@@ -173,6 +186,50 @@ export default function ContactPage() {
           </form>
         </motion.div>
       </section>
+      {/* SERVICE HOURS */}
+
+<div className="p-8 bg-white dark:bg-gray-800 rounded-[2rem] border border-slate-100 dark:border-gray-700 shadow-sm">
+
+<h3 className="font-bold text-xl mb-4">Service Hours</h3>
+
+<div className="space-y-2 text-slate-500 dark:text-slate-400">
+<p><strong>Sunday:</strong> 7:00 AM – 10:00 PM</p>
+<p><strong>Wednesday:</strong> 6:00 PM – 8:00 PM</p>
+<p><strong>Friday Prayer:</strong> 6:00 PM</p>
+</div>
+
+</div>
+{/* FAQ */}
+
+<section className="max-w-6xl mx-auto px-6 mt-24">
+
+<h2 className="text-3xl font-bold mb-10 text-center">
+Frequently Asked Questions
+</h2>
+
+<div className="space-y-6">
+
+<div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow">
+<h3 className="font-bold mb-2">
+What time is Sunday service?
+</h3>
+<p className="text-slate-500 dark:text-slate-400">
+Our Sunday worship service starts at 9:00 AM.
+</p>
+</div>
+
+<div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow">
+<h3 className="font-bold mb-2">
+Can I submit a prayer request?
+</h3>
+<p className="text-slate-500 dark:text-slate-400">
+Yes, use the contact form above and select Prayer Request.
+</p>
+</div>
+
+</div>
+
+</section>
 
       {/* MAP SECTION */}
       <section className="max-w-7xl mx-auto px-6 mt-24">
@@ -192,6 +249,61 @@ export default function ContactPage() {
           />
         </motion.div>
       </section>
+      {/* OFFICE HOURS */}
+
+<section className="max-w-7xl mx-auto px-6 mt-24 text-center">
+
+<h2 className="text-3xl font-bold mb-8">
+Church Office Hours
+</h2>
+
+<div className="grid md:grid-cols-3 gap-8">
+
+<div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow">
+<h3 className="font-bold">Monday - Friday</h3>
+<p>9:00 AM - 5:00 PM</p>
+</div>
+
+<div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow">
+<h3 className="font-bold">Saturday</h3>
+<p>10:00 AM - 2:00 PM</p>
+</div>
+
+<div className="p-6 bg-white dark:bg-gray-800 rounded-xl shadow">
+<h3 className="font-bold">Sunday</h3>
+<p>After Service</p>
+</div>
+
+</div>
+
+</section>
+{/* NEWSLETTER */}
+
+<section className="max-w-4xl mx-auto px-6 mt-24 text-center">
+
+<h2 className="text-3xl font-bold mb-6">
+Stay Connected
+</h2>
+
+<p className="text-slate-500 dark:text-slate-400 mb-6">
+Subscribe to receive church updates and devotionals.
+</p>
+
+<div className="flex gap-4 justify-center flex-wrap">
+
+<input
+type="email"
+placeholder="Enter your email"
+className="px-6 py-3 rounded-xl border"
+/>
+
+<button className="bg-blue-600 text-white px-6 py-3 rounded-xl font-bold">
+Subscribe
+</button>
+
+</div>
+
+</section>
 
       <footer className="mt-24 py-12 text-center text-slate-400 border-t border-slate-200 dark:border-gray-800 mx-6">
         <p>© {new Date().getFullYear()} Throne of Christ Ministries. Built for the Kingdom.</p>

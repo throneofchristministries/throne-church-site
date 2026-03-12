@@ -1,24 +1,36 @@
-import { defineType, defineField } from "sanity"
+// schemas/event.ts
+import { defineType, defineField } from "sanity";
 
-export const event = defineType({
+export default defineType({
   name: "event",
-  title: "Events",
+  title: "Event",
   type: "document",
   fields: [
     defineField({
       name: "title",
-      title: "Event Title",
-      type: "string"
+      title: "Title",
+      type: "string",
+      validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: "date",
-      title: "Event Date",
-      type: "datetime"
+      title: "Date",
+      type: "datetime",
+    }),
+    defineField({
+      name: "time",
+      title: "Time",
+      type: "string",
     }),
     defineField({
       name: "location",
       title: "Location",
-      type: "string"
-    })
-  ]
-})
+      type: "string",
+    }),
+    defineField({
+      name: "description",
+      title: "Description",
+      type: "text",
+    }),
+  ],
+});
