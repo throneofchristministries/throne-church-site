@@ -1,3 +1,5 @@
+"use client"; // This must be the very first line
+
 import { defineConfig } from 'sanity'
 import { schema } from './src/sanity/schemaTypes'
 import { visionTool } from '@sanity/vision'
@@ -9,7 +11,7 @@ export default defineConfig({
   basePath: '/studio',
   projectId,
   dataset,
-  schema,   // <- the object with `types` array
+  schema, 
   plugins: [
     structureTool({ structure }),
     visionTool({ defaultApiVersion: apiVersion }),
