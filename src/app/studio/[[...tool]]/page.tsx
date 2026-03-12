@@ -1,11 +1,9 @@
-"use client"; // This must be the first line
+import { metadata, viewport } from 'next-sanity/studio';
+import { Studio } from './Studio';
 
-import { NextStudio } from 'next-sanity/studio'
-import config from '@/../sanity.config'
-
-// These exports are fine to stay, but the component above must be Client-side
-export { metadata, viewport } from 'next-sanity/studio'
+// These can only be exported from a Server Component
+export { metadata, viewport };
 
 export default function StudioPage() {
-  return <NextStudio config={config} />
+  return <Studio />;
 }
