@@ -235,7 +235,7 @@ export default function Home() {
 
         <a
           href="#latest-sermon"
-           className="bg-white dark:bg-gray-700 p-8 rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300"        >
+           className="bg-white dark:bg-gray-800 p-8rounded-2xl shadow-lg text-center hover:scale-105 transition duration-300"        >
           <PlayCircle/> Watch Latest Sermon
         </a>
 
@@ -325,10 +325,10 @@ export default function Home() {
         <div className="flex justify-center">
 
           <Image
-            src="/about-church.jpg"
+            src="/church.jpg"
             alt="Church"
-            width={500}
-            height={400}
+            width={300}
+            height={300}
             className="rounded-2xl shadow-lg object-cover"
           />
 
@@ -344,7 +344,7 @@ export default function Home() {
 
       <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
         <h3 className="font-bold text-xl mb-2">Sunday Worship</h3>
-        <p>9:00 AM – 12:00 PM</p>
+        <p>7:00 AM – 10:00 AM</p>
       </div>
 
       <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
@@ -353,8 +353,8 @@ export default function Home() {
       </div>
 
       <div className="p-6 bg-white dark:bg-gray-700 rounded-xl shadow">
-        <h3 className="font-bold text-xl mb-2">Prayer Meeting</h3>
-        <p>Friday 6:00 PM</p>
+        <h3 className="font-bold text-xl mb-2">All-night Vigil</h3>
+        <p>Friday 10:00 PM - 2:00 AM</p>
       </div>
 
     </div>
@@ -406,11 +406,11 @@ Church Life
 
 <div className="max-w-6xl mx-auto grid md:grid-cols-3 gap-6 px-6">
 
-<Image src="/gallery/1.jpg" width={400} height={300} alt="" className="rounded-xl"/>
+<Image src="/1.jpg" width={250} height={200} alt="" className="rounded-xl"/>
 
-<Image src="/gallery/2.jpg" width={400} height={300} alt="" className="rounded-xl"/>
+<Image src="/2.jpg" width={250} height={200} alt="" className="rounded-xl"/>
 
-<Image src="/gallery/3.jpg" width={400} height={300} alt="" className="rounded-xl"/>
+<Image src="/3.jpg" width={250} height={200} alt="" className="rounded-xl"/>
 
 </div>
 
@@ -527,15 +527,15 @@ Send Prayer Request
         <div className="flex justify-center gap-10 flex-wrap">
 
           <div className="flex items-center gap-2">
-            <Phone size={18}/> +233 XXX XXX XXX
+            <Phone size={18}/> +233 24 436 0346 , +233 24 395 2644
           </div>
 
           <div className="flex items-center gap-2">
-            <Mail size={18}/> info@throneofchrist.org
+            <Mail size={18}/> throneofchristministries2020@gmail.com
           </div>
 
           <div className="flex items-center gap-2">
-            <MapPin size={18}/> Accra, Ghana
+            <MapPin size={18}/> Adenta New Site, Accra, Ghana
           </div>
 
         </div>
@@ -574,7 +574,7 @@ Visit Us
 <div className="max-w-6xl mx-auto px-6">
 
 <iframe
-src="https://www.google.com/maps?q=Accra,Ghana&output=embed"
+src="https://www.google.com/maps?q=AdentaNewSite,Accra,Ghana&output=embed"
 className="w-full h-96 rounded-xl"
 loading="lazy"
 />

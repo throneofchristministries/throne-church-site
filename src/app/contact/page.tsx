@@ -193,9 +193,9 @@ Submit Prayer Request
 <h3 className="font-bold text-xl mb-4">Service Hours</h3>
 
 <div className="space-y-2 text-slate-500 dark:text-slate-400">
-<p><strong>Sunday:</strong> 7:00 AM – 10:00 PM</p>
+<p><strong>Sunday:</strong> 7:00 AM – 10:00 AM</p>
 <p><strong>Wednesday:</strong> 6:00 PM – 8:00 PM</p>
-<p><strong>Friday Prayer:</strong> 6:00 PM</p>
+<p><strong>All Night:</strong> 10:00 PM</p>
 </div>
 
 </div>
@@ -214,7 +214,7 @@ Frequently Asked Questions
 What time is Sunday service?
 </h3>
 <p className="text-slate-500 dark:text-slate-400">
-Our Sunday worship service starts at 9:00 AM.
+Our Sunday worship service starts at 7:00 AM.
 </p>
 </div>
 

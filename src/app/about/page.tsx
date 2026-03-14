@@ -11,15 +11,13 @@ export default function AboutPage() {
   const [darkMode, setDarkMode] = useState(false)
 
   const team = [
-    { name: "Pastor John Doe", role: "Senior Pastor", photo: "/team/pastor.jpg" },
-    { name: "Jane Smith", role: "Youth Minister", photo: "/team/jane.jpg" },
-    { name: "Mark Johnson", role: "Music Director", photo: "/team/mark.jpg" },
+    { name: "Apostle George Owusu", photo: "/pastor.jpg" },
+    { name: "Prof. Victoria Appiah", photo: "/victoria.jpg" },
+    { name: "Prayer Team", role: "Prayer Leaders", photo: "/prayer-team.jpg" },
   ]
 
   const history = [
-    { year: "2005", event: "Founded Throne of Christ Ministries" },
-    { year: "2010", event: "Built our first church campus" },
-    { year: "2015", event: "Launched community outreach programs" },
+    { year: "2020", event: "Founded Throne of Christ Ministries" },
     { year: "2020", event: "Started online services" },
   ]
 
@@ -115,10 +113,10 @@ export default function AboutPage() {
         >
 
           <Image
-            src="/about-church.jpg"
+            src="/church.jpg"
             alt="Throne of Christ Ministries"
-            width={500}
-            height={400}
+            width={400}
+            height={300}
             className="rounded-2xl shadow-lg object-cover"
           />
 
@@ -225,11 +223,9 @@ Church Life
 
 <div className="grid md:grid-cols-3 gap-6">
 
-<Image src="/gallery/1.jpg" width={400} height={300} alt="Church" className="rounded-xl shadow"/>
-
-<Image src="/gallery/2.jpg" width={400} height={300} alt="Worship" className="rounded-xl shadow"/>
-
-<Image src="/gallery/3.jpg" width={400} height={300} alt="Service" className="rounded-xl shadow"/>
+<Image src="/church.jpg" width={200} height={150} alt="Church" className="rounded-xl shadow"/>
+<Image src="/worship.jpg" width={200} height={150} alt="Worship" className="rounded-xl shadow"/>
+<Image src="/service.jpg" width={200} height={150} alt="Service" className="rounded-xl shadow"/>
 
 </div>
 
@@ -345,7 +341,7 @@ Service Times
 
 <div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow">
 <h3 className="font-bold text-lg">Sunday Worship</h3>
-<p>9:00 AM - 12:00 PM</p>
+<p>7:00 AM - 10:00 AM</p>
 </div>
 
 <div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow">
@@ -354,8 +350,8 @@ Service Times
 </div>
 
 <div className="bg-white dark:bg-gray-700 p-8 rounded-xl shadow">
-<h3 className="font-bold text-lg">Prayer Meeting</h3>
-<p>Friday 6:00 PM</p>
+<h3 className="font-bold text-lg">All-night Vigil</h3>
+<p>Friday 10:00 PM - 2:00 AM</p>
 </div>
 
 </div>
